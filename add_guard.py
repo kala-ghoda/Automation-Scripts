@@ -40,7 +40,7 @@ if __name__ == "__main__":
     with open(FILE, 'r') as f:
         for file_name in f:
             path_vars = set()
-            #Add 'include' to list of keywords in path to be ignored
+            #Add 'include' to the list of keywords to be ignored in the path
             path_vars.add("include")
             header_keywords = []
 
@@ -54,7 +54,7 @@ if __name__ == "__main__":
                     continue
                 header_keywords.append(path_var.upper())
                 path_vars.add(path_var)
-                #Checking if any of the directories in path equal filename. Don't want repetition in header
+                #Checking if any of the directories in path equal filename. Don't want repetition in the include guard
                 if path_var == header_name.lower():
                     break
             header = "_".join(header_keywords) +  END_
