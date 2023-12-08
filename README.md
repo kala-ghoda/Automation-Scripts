@@ -7,7 +7,11 @@
 - Running test
 
 1. Requires the json with the necessary configuration.
-2. Need to build the test file in the required format.
+2. Need to build the text file in the required format. Command to do that. Note that excluding test files is optional.
+```bash
+grep -R "#pragma once" --include=\*.hpp --exclude-dir=\*tests/
+```
+For test, build the text file in the assets folder.
 3. Run the command:
 ```python
 python3 add_guard.py -f json_file.json
