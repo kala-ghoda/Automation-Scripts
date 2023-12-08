@@ -12,8 +12,9 @@
 grep -R "#pragma once" --include=\*.hpp --exclude-dir=\*tests/
 ```
 For test, build the text file in the assets folder.
+
 3. Run the command:
-```python
+```bash
 python3 add_guard.py -f json_file.json
 ```
 
